@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-coding-challenge
 
-## Available Scripts
+## Getting started
 
-In the project directory, you can run:
+To get the frontend running locally:
 
-### `npm start`
+- Clone this repo
+- `npm install` to install all req'd dependencies
+- `npm start` to start the local server (this project uses create-react-app)  
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Making requests to the backend API
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+API server is running at https://raw.githubusercontent.com/StreamCo/react-coding-challenge/master/feed/sample.json, for the application to make requests against.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Functionality overview
 
-### `npm run build`
+The example application get data from back-end API and sort them to movies and series categories then display them. It uses fetch.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**General functionality:**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- GET and sort data
+- display first 21 popular movies
+- display first 21 popular series
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**The general page breakdown looks like this:**
 
-### `npm run eject`
+- Home page (URL: /home )
+    - 2 tiles of popular titles (movies, series)
+- Series page (URL: /series )
+    - display first 21 series
+- Home page (URL: /movies )
+    - display first 21 movies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Architecture and Dependencies**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I used components/containers architecture to seperate UI and Logic
+- components: contain stateless functional components for UI
+- containers: contain class components for logic 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- dependencies:
+    - jest, enzyme: for testing
+    - react-router-dom: for routing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Code improvement
+The application only reads data from back-end and display them to the user. It can be improve by adding C*UD.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+If  allocated more time I could improve the UX.

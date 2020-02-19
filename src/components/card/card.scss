@@ -1,8 +1,9 @@
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 13rem);
+    grid-template-columns: repeat(auto-fit, min-max(12rem, 1fr));
     align-items: center;
     grid-gap: 2rem;
+
 
     &__card {
         display: flex;

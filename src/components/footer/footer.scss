@@ -5,12 +5,16 @@
     padding: 2rem 10rem;
     font-size: 1.4rem;
     margin-top: 5rem;
+    // margin-bottom: -25rem;
     position:absolute;
     bottom:0;
     width: 99%;
 
     @include respond(tablet-large) {
         padding: 0;
+    }
+    @include respond(mobile-large) {
+        margin-top: 2rem;
     }
 
     &__list {
