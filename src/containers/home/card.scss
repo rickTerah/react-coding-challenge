@@ -1,0 +1,21 @@
+.section-card {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 12rem);
+    align-items: center;
+    grid-gap: 2rem;
+}
+
+.card-link {
+    text-decoration: none;
+    color: #224;
+}
+
+.home-container {
+    margin: 2rem 0;
+    height: 75vh;
+}
