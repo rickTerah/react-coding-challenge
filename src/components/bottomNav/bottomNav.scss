@@ -1,0 +1,30 @@
+@import '../../sass/abstracts/mixins.scss';
+
+.navbar__low {
+	height: 6rem;
+    background: #333;
+	z-index: 100;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10rem;
+
+	@include respond(tablet-large) {
+		padding: 0 5rem;
+	}
+
+	@include respond(mobile-large) {
+		padding: 0;
+	}
+
+        &-title {
+            font-size: 3rem;
+			color: white;
+			font-weight: 400;
+			@include respond(tablet-large) {
+				font-size: 2.5rem;
+				font-weight: 400;
+			}
+        }
+}

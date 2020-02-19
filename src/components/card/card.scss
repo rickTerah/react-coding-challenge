@@ -1,0 +1,23 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, min-max(12rem, 1fr));
+    align-items: center;
+    grid-gap: 2rem;
+
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__card-image {
+        width: 90%;
+        height: auto;
+        margin: 2rem auto;
+    }
+
+    &__card-name {
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+}
