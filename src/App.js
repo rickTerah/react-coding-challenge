@@ -18,6 +18,7 @@ const App = (props) => {
           <Route exact path='/movies' render={ () => <Movies /> } />
           <Route exact path='/home' render={ () => <Index /> }/>
           <Redirect exact path='/' to='/home' />
+          <Redirect exact path='' to='/home' />
         </Switch>
       </main>
       <Footer />
