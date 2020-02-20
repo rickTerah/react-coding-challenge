@@ -16,19 +16,20 @@ class Movies extends Component {
               const entries = data.entries;
               const totalMovies = entries.filter(e => e.programType === 'movie');
               const movies = totalMovies.slice(0, 21).sort((a, b) => (a.title > b.title) ? 1 : -1);
-              this.setState({ movies })
+              this.setState({ movies: movies })
           }).catch((error) => {
             if(error){
                 this.setState({server_error: true})
+                console.log(this.state.server_error)
             }
         })
      }
     render() { 
-        if(this.state.movies.length === 0){
-            return <p>Loading...</p>
+        if(this.state.server_error === true ){
+            return <p className="error-container">Ooops something went wrong....</p>
         }
-        if(this.state.server_error){
-            return <p>Ooops something went wrong....</p>
+        if(this.state.movies.length === 0){
+            return <p className="error-container">Loading...</p>
         }
         return ( 
             <div className="section-card">
