@@ -23,12 +23,13 @@ class Series extends Component {
             }
         })
      }
-    render() { 
-        if(this.state.series.length === 0){
-            return <p> Loading... </p>
-        }
+    render() {
         if(this.state.server_error){
-            return <p>Ooops something went wrong...</p>
+            return <p className="error-container">Ooops something went wrong...</p>
+        }
+         
+        if(this.state.series.length === 0){
+            return <p className="error-container"> Loading... </p>
         }
         
         return ( 
